@@ -1,0 +1,1 @@
+# Mendix-StudioPro-Release-Notes-Checker
