@@ -1,6 +1,6 @@
 # 🔍 Mendix Studio Pro Release Notes Checker
 
-A semantic search tool for Mendix Studio Pro release notes. Query release notes from versions 9, 10, and 11 using natural language to quickly find bug fixes, features, and known issues.
+A semantic search tool for Mendix Studio Pro release notes. Query release notes from versions 9, 10, and 11 using natural language to quickly find bug fixes, features, and known issues. This was designed for use as a claude code skill.
 
 > **"Has this Mendix bug or behavior already been documented or fixed?"**
 
