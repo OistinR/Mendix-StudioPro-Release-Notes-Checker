@@ -24,9 +24,20 @@ This tool scrapes Mendix Studio Pro release notes, indexes them in a local vecto
 
 ## 📋 Prerequisites
 
-- Python 3.8+
-- Internet connection (only needed for scraping, not for querying)
-- ~200MB disk space for the vector database
+### System Requirements
+- **Python 3.8+** (tested on Python 3.11+)
+- **pip** (Python package manager)
+- **~500MB disk space** (200MB for database + 300MB for dependencies)
+- **Internet connection** (only needed for initial scraping and updates, not for querying)
+
+### Python Dependencies
+All dependencies are listed in `scripts/requirements.txt`:
+- **lancedb** >= 0.3.0 - Vector database
+- **sentence-transformers** >= 2.2.0 - Embedding model (~90MB download)
+- **requests** >= 2.31.0 - HTTP client for scraping
+- **beautifulsoup4** >= 4.12.0 - HTML parsing
+- **lxml** >= 4.9.0 - Fast HTML parser
+- **pandas** >= 2.0.0 - Data manipulation
 
 ---
 
@@ -59,6 +70,11 @@ Install dependencies:
 cd scripts
 pip install -r requirements.txt
 ```
+
+**Note:** First install will download:
+- ~90MB embedding model (`all-MiniLM-L6-v2`)
+- ~200MB of Python packages
+- This is a **one-time download**
 
 ### 3. Build the Database (First Time)
 
@@ -383,12 +399,6 @@ A: Try broader keywords, remove version filters, or rephrase your query.
 ## 🤝 Contributing
 
 Found a bug or have an idea? Open an issue or submit a pull request!
-
----
-
-## 📄 License
-
-MIT License - feel free to use and modify.
 
 ---
 
